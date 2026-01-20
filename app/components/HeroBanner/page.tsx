@@ -1,8 +1,12 @@
+"use client";
+
 import React from 'react';
 import { SignUpButton } from "@clerk/nextjs";
 import { GraduationCap, Globe, BookOpen, Award } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const Hero = () => {
+    const router = useRouter();
   return (
     <div className="relative bg-navy-900 text-white overflow-hidden">
       {/* Background Image with Overlay */}
@@ -44,7 +48,9 @@ const Hero = () => {
             </button>
           </SignUpButton>
           
-          <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold rounded-lg transition duration-300">
+          <button onClick={()=>{
+            router.push('../resource/programs');
+        }} className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold rounded-lg transition duration-300">
             VIEW PROGRAMS
           </button>
         </div>

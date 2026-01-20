@@ -54,11 +54,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-gray-50 border-t`}>
-        <a href="#" className="block py-3 px-4 text-sm hover:bg-yellow-50">HOME</a>
-        <a href="#" className="block py-3 px-4 text-sm hover:bg-yellow-50">ABOUT US</a>
-        <a href="#" className="block py-3 px-4 text-sm hover:bg-yellow-50">PROGRAMS</a>
-        <a href="#" className="block py-3 px-4 text-sm hover:bg-yellow-50">ADMISSIONS</a>
-        <a href="#" className="block py-3 px-4 text-sm bg-blue-900 text-white">STUDENT PORTAL</a>
+        <a href="/" className="block py-3 px-4 text-sm hover:bg-yellow-50">HOME</a>
+        <a href="../resource/about" className="block py-3 px-4 text-sm hover:bg-yellow-50">ABOUT US</a>
+        <a href="../resource/programs" className="block py-3 px-4 text-sm hover:bg-yellow-50">PROGRAMS</a>
+        <a href="../resource/admission" className="block py-3 px-4 text-sm hover:bg-yellow-50">ADMISSIONS</a>
+        <a href="/user/dashboard" className="block py-3 px-4 text-sm bg-blue-900 text-white">STUDENT PORTAL</a>
       </div>
       
     </nav>

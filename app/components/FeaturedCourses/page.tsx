@@ -1,3 +1,7 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 const courses = [
   { title: "International Business", level: "Bachelor's", duration: "4 Years", icon: "💼" },
   { title: "Computer Science", level: "Bachelor's/Master's", duration: "3-4 Years", icon: "💻" },
@@ -6,6 +10,7 @@ const courses = [
 ];
 
 const FeaturedCourses = () => {
+    const router = useRouter();
   return (
     <section className="py-20 bg-blue-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
@@ -25,7 +30,9 @@ const FeaturedCourses = () => {
           ))}
         </div>
 
-        <button className="mt-16 px-10 py-4 border-2 border-navy-900 text-blue-900 font-bold rounded-full hover:bg-blue-900 hover:text-white transition-all duration-300">
+        <button onClick={()=>{
+            router.push('../resource/programs');
+        }} className="mt-16 px-10 py-4 border-2 border-navy-900 text-blue-900 font-bold rounded-full hover:bg-blue-900 hover:text-white transition-all duration-300">
           BROWSE ALL COURSES
         </button>
       </div>
